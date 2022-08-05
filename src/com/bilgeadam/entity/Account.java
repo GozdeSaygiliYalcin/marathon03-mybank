@@ -47,7 +47,6 @@ public class Account {
 	@OneToMany(mappedBy = "account")
 	private Collection<Process>processList;
 
-	
 	public Account(int accountNumber) {
 		this.accountNumber = accountNumber;
 		

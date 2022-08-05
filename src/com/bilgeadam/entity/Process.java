@@ -24,16 +24,16 @@ public class Process {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "process_id")
 	private long id;
+	
 	@Column(name = "process_no")
 	private String processNo;
+	
 	@ManyToOne
 	@JoinColumn(name = "account_number",referencedColumnName ="account_number")
 	private Account account;
 	
-	
 	@OneToOne(mappedBy = "process")
 	private ProcessDetail processDetail;
-
 
 	public Process(String processNo) {
 		this.processNo = processNo;

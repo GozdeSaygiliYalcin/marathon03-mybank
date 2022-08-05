@@ -30,25 +30,25 @@ public class App {
 	EntityController<ProcessDetail> processDetailController = new EntityController<ProcessDetail>();
 	
 	System.out.println("----------------------------------");
-	Collection<Process> aliEuroProcessList = new ArrayList<>();
-	Collection<Process> aliTlProcessList = new ArrayList<>();
-	Collection<Process> ayseTlProcessList = new ArrayList<>();
-	Collection<Process> ayseDolarProcessList = new ArrayList<>();
+	Collection<Process> a1 = new ArrayList<>();
+	Collection<Process> a2 = new ArrayList<>();
+	Collection<Process> a3 = new ArrayList<>();
+	Collection<Process> a4 = new ArrayList<>();
 	
 	System.out.println("----------------------------------");
 	Customer customer = new Customer("100","Ali KARA");
 	Customer customer2 = new Customer("101","Ayse SARI");
-	
-	System.out.println("----------------------------------");
-	Branch branch = new Branch("74","Bartin");
-	Branch branch2 = new Branch("67","Zonguldak");
-	Branch branch3 = new Branch("78", "Karabuk");
 	
 	System.out.println("----------------------------------");	
 	Account account = new Account(7410010); 
 	Account account2 = new Account(6710011);
 	Account account3 = new Account(7810112);
 	Account account4 = new Account(7410110);
+	
+	System.out.println("----------------------------------");
+	Branch branch = new Branch("74","Bartin");
+	Branch branch2 = new Branch("67","Zonguldak");
+	Branch branch3 = new Branch("78", "Karabuk");
 	
 	System.out.println("----------------------------------");	
 	AccountType accountType = new AccountType("TL",10);
@@ -65,14 +65,14 @@ public class App {
 	Process process7 = new Process("101048");
 	
 	System.out.println("----------------------------------");
-	aliTlProcessList.add(process);
-	aliTlProcessList.add(process2);
-	aliTlProcessList.add(process3);
-	aliEuroProcessList.add(process4);
+	a2.add(process);
+	a2.add(process2);
+	a2.add(process3);
+	a1.add(process4);
 	
-	ayseDolarProcessList.add(process5);
-	ayseTlProcessList.add(process6);
-	ayseTlProcessList.add(process7);
+	a4.add(process5);
+	a3.add(process6);
+	a3.add(process7);
 	
 	System.out.println("----------------------------------");
 	ProcessDetail processDetail = new ProcessDetail("ATMden para yatirma", 400, LocalDate.of(2022, 1, 2));
@@ -86,22 +86,22 @@ public class App {
 	account.setBranch(branch);
 	account.setCustomer(customer);
 	account.setAccountType(accountType);
-	account.setProcessList(aliTlProcessList);
+	account.setProcessList(a2);
 	
 	account2.setBranch(branch2);
 	account2.setCustomer(customer);
 	account2.setAccountType(accountType2);
-	account2.setProcessList(aliEuroProcessList);
+	account2.setProcessList(a1);
 	
 	account3.setBranch(branch3);
 	account3.setCustomer(customer2);
 	account3.setAccountType(accountType3);
-	account3.setProcessList(ayseDolarProcessList);
+	account3.setProcessList(a4);
 	
 	account4.setBranch(branch);
 	account4.setCustomer(customer2);
 	account4.setAccountType(accountType);
-	account4.setProcessList(ayseTlProcessList);
+	account4.setProcessList(a3);
 	
 	System.out.println("----------------------------------");	
 	process.setAccount(account);

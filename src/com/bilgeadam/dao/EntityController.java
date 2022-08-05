@@ -16,8 +16,7 @@ public class EntityController<T> implements IRepository<T> {
     }
 
 	@Override
-	public void update(long id, T entity) {
-		
+	public void update(long id, T entity) {	
 	}
 
 	@Override
